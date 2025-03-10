@@ -64,7 +64,9 @@ function Soal() {
         nama_siswa: namaSiswa,
       }));
 
-      const response = await axios.post("http://localhost:8000/api/simpan-jawaban", payload);
+      // const response = await axios.post("http://localhost:8000/api/simpan-jawaban", payload);
+      const response = await axios.post("http://185.201.9.65/api/simpan-jawaban", payload);
+      
       const { benar, salah } = response.data;
 
       // **🔹 Simpan hasil & tampilkan modal**

@@ -22,7 +22,8 @@ function Soal() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/get-soal");
+        // const response = await axios.get("http://localhost:8000/api/get-soal");
+        const response = await axios.get("http://185.201.9.65/api/get-soal");
         setSoal(response.data || []);
       } catch (err) {
         setError("Gagal mengambil soal.");
